@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="fa"><head><title>پنل مدیریت | گیفت‌هاب</title><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;font-family:'Vazirmatn','Plus Jakarta Sans',sans-serif;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#10131c", "on-surface-variant": "#cbc3d7", "on-primary": "#3c0091", "secondary-fixed": "#acedff", "outline-variant": "#494454", "on-background": "#e0e2ef", "inverse-primary": "#6d3bd7", "on-primary-container": "#340080", "on-secondary-fixed-variant": "#004e5c", "primary-container": "#a078ff", "secondary": "#4cd7f6", "surface-container-highest": "#32343f", "on-tertiary-fixed": "#002113", "on-secondary-container": "#00424e", "tertiary-container": "#00a572", "surface-container-high": "#272a34", "primary-fixed": "#e9ddff", "tertiary-fixed": "#6ffbbe", "on-secondary": "#003640", "surface-container": "#1c1f29", "surface-tint": "#d0bcff", "secondary-container": "#03b5d3", "surface-container-low": "#181b25", "on-surface": "#e0e2ef", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "on-primary-fixed": "#23005c", "surface-dim": "#10131c", "primary": "#d0bcff", "on-error": "#690005", "inverse-on-surface": "#2d303a", "error": "#ffb4ab", "surface": "#10131c", "surface-bright": "#363943", "inverse-surface": "#e0e2ef", "on-secondary-fixed": "#001f26", "secondary-fixed-dim": "#4cd7f6", "on-error-container": "#ffdad6", "outline": "#958ea0", "on-tertiary-container": "#00311f", "on-primary-fixed-variant": "#5516be", "surface-variant": "#32343f", "on-tertiary": "#003824", "primary-fixed-dim": "#d0bcff", "tertiary": "#4edea3", "surface-container-lowest": "#0b0e17", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin-desktop": "3.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "gutter": "1.25rem", "margin-tablet": "2rem", "margin": "1rem", "gutter-desktop": "1.75rem" }, "fontFamily": { "label-lg": [ "Plus Jakarta Sans" ], "display-lg": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-xl": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "display-lg-mobile": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "fontWeight": "600" } ], "display-lg": [ "48px", { "lineHeight": "64px", "fontWeight": "800" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "34px", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "14px", "fontWeight": "700" } ], "label-md": [ "12px", { "lineHeight": "18px", "fontWeight": "500" } ], "headline-sm": [ "18px", { "lineHeight": "28px", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "28px", "fontWeight": "400" } ], "headline-md": [ "22px", { "lineHeight": "32px", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "44px", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "24px", "fontWeight": "400" } ], "display-lg-mobile": [ "32px", { "lineHeight": "44px", "fontWeight": "800" } ] } } } };</script></head><body class="bg-background text-on-background selection:bg-primary selection:text-on-primary min-h-screen"><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-6 px-4 shadow-[4px_0_30px_rgba(0,0,0,0.5)]"><div class="flex flex-col gap-6"><div class="flex items-center gap-space-sm px-2"><div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center shadow-[0_0_20px_rgba(160,120,255,0.2)]"><span class="material-symbols-outlined text-primary text-2xl">admin_panel_settings</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">مدیریت گیفت‌هاب</span><span class="font-label-sm text-label-sm text-secondary">پنل ادمین و انبار کدها</span></div></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-xl"><a aria-current="page" class="flex items-center gap-space-sm px-4 py-3 transition-all bg-primary-container text-on-primary-container font-bold rounded-xl" data-path="admin-panel" href="admin.html"><span class="material-symbols-outlined">dashboard</span>میز کار ادمین</a><a class="flex items-center gap-space-sm px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-lg text-label-lg" data-path="inventory-management" href="admin.html"><span class="material-symbols-outlined">inventory_2</span>انبار کدها و ووچرها</a><a class="flex items-center gap-space-sm px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-lg text-label-lg" data-path="orders-management" href="admin.html"><span class="material-symbols-outlined">receipt_long</span>تراکنش‌ها و سفارشات</a><a class="flex items-center gap-space-sm px-4 py-3 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-lg text-label-lg" data-path="home" href="index.html"><span class="material-symbols-outlined">storefront</span>بازگشت به فروشگاه</a></nav></div><div class="p-4 rounded-2xl bg-surface-container-low flex items-center gap-space-sm"><img alt="Profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbLsjgRAa5zpOkkYnFIqQ5XIWSkSyDq8hhriVNqEtrjj5cGD_s_OQN3REmxQA0Q0_msmGpDxm2RbnPYHqY1Xm31oqyWN2JNr-lBCTs16pxri1IzTpO-4IeenDYeg9CO786WxAJpd-GgqwSXpMiXmvFfuPyBN58HRq15nxLtLbf7XzU-pGfuzmFUuvXS3-kyUvyAfGLfzDtE9-6AeCwdR-AxwW0HUJsHGtkHrLQNRkR"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-bold">مدیر ارشد سامانه</span><span class="font-label-sm text-label-sm text-tertiary">سطح دسترسی کامل</span></div></div></aside><div class="pr-72"><header class="fixed top-0 right-72 left-0 h-16 bg-surface-container-low/85 backdrop-blur-xl z-40 flex items-center justify-between px-margin-tablet lg:px-margin-desktop shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-outline">search</span><span class="font-label-md text-label-md text-outline">جستجو در انبار و سفارشات...</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container font-label-sm text-label-sm text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>سیستم توزیع کد فعال</div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbLsjgRAa5zpOkkYnFIqQ5XIWSkSyDq8hhriVNqEtrjj5cGD_s_OQN3REmxQA0Q0_msmGpDxm2RbnPYHqY1Xm31oqyWN2JNr-lBCTs16pxri1IzTpO-4IeenDYeg9CO786WxAJpd-GgqwSXpMiXmvFfuPyBN58HRq15nxLtLbf7XzU-pGfuzmFUuvXS3-kyUvyAfGLfzDtE9-6AeCwdR-AxwW0HUJsHGtkHrLQNRkR"/></div></header><main class="w-full pt-16 bg-background relative min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-margin-desktop flex flex-col gap-space-xl">
+<!-- Header Summary & Quick Action Bar -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse shadow-[0_0_12px_rgba(78,222,163,0.8)]"></span>
+<span class="font-label-sm text-label-sm text-tertiary">محیط نظارت عملیاتی زنده</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">داشبورد فرماندهی GiftHub</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">مدیریت انبارهای دیجیتال، سهمیه‌بندی و تحویل آنی ووچرهای بین‌المللی</p>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-surface-container-high hover:bg-surface-bright text-secondary transition-all font-label-lg text-label-lg shadow-md hover:shadow-cyan-500/10" id="openBatchModalBtn">
+<span class="material-symbols-outlined text-xl">upload_file</span>
+          تزریق دسته‌ای کدها
+        </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-l from-primary to-primary-container text-on-primary-container font-extrabold transition-all hover:brightness-110 font-label-lg text-label-lg shadow-[0_8px_24px_rgba(160,120,255,0.35)] active:scale-95" id="openNewCardModalBtn">
+<span class="material-symbols-outlined text-xl">add_card</span>
+          افزودن گیفت‌کارت جدید
+        </button>
+</div>
+</div>
+<!-- 1. KPI Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- KPI 1 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-5 shadow-lg flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-primary/10 blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">کل فروش امروز</span>
+<div class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">payments</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg-mobile lg:text-headline-xl font-extrabold text-on-surface">۲۴,۵۸۰,۰۰۰</span>
+<span class="font-label-md text-label-md text-on-surface-variant">تومان</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base">trending_up</span>
+<span>+۱۸٪ نسبت به روز گذشته</span>
+</div>
+</div>
+<!-- Sparkline mini chart -->
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>میانگین هر سفارش: ۳۳۶ هزار</span>
+<svg class="w-20 h-6 text-tertiary" fill="none" viewbox="0 0 100 30">
+<path d="M0 25 L20 18 L40 22 L60 10 L80 14 L100 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-5 shadow-lg flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-secondary/10 blur-2xl group-hover:bg-secondary/20 transition-all"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">سفارش‌های موفق امروز</span>
+<div class="w-10 h-10 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg-mobile lg:text-headline-xl font-extrabold text-on-surface">۷۳</span>
+<span class="font-label-md text-label-md text-on-surface-variant">سفارش آنی</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base">verified</span>
+<span>۱۰۰٪ تحویل خودکار و بدون وقفه</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>میانگین زمان پردازش: ۱.۴ ثانیه</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-5 shadow-lg flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-tertiary/10 blur-2xl group-hover:bg-tertiary/20 transition-all"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">موجودی ووچرهای انبار</span>
+<div class="w-10 h-10 rounded-xl bg-tertiary/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">pin</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg-mobile lg:text-headline-xl font-extrabold text-on-surface">۱,۴۲۰</span>
+<span class="font-label-md text-label-md text-on-surface-variant">کد رمزگذاری‌شده</span>
+</div>
+<div class="flex items-center gap-1.5 text-error font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base">warning</span>
+<span>۲ محصول نزدیک اتمام موجودی</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>ظرفیت انبار: ۸۲٪ تکمیل</span>
+<div class="w-20 bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-5 shadow-lg flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-primary-container/10 blur-2xl group-hover:bg-primary-container/20 transition-all"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">کاربران فعال پلتفرم</span>
+<div class="w-10 h-10 rounded-xl bg-primary-container/15 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">group</span>
+</div>
+</div>
+<div class="mt-4 flex flex-col gap-1">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg-mobile lg:text-headline-xl font-extrabold text-on-surface">۱۲,۳۵۰</span>
+<span class="font-label-md text-label-md text-on-surface-variant">گیمر و خریدار</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base">person_add</span>
+<span>+۴۸ عضویت تازه در ۲۴ ساعت</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>احراز هویت شده: ۹۱٪</span>
+<span class="text-primary font-bold">VIP: ۳۴۰</span>
+</div>
+</div>
+</div>
+<!-- 2. Middle Row: Real-time System Status & Gateway Health -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Payment Gateways & Dispatchers -->
+<div class="lg:col-span-2 rounded-2xl bg-surface-container-low p-6 flex flex-col gap-5 shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl">lan</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">وضعیت درگاه‌های پرداخت و موتور توزیع آنی</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">مانیتورینگ پینگ، پایداری سوئیچ شاپرک و پروتکل‌های رمزنگاری ووچرها</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            شبکه آنلاین
+          </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Gateway 1 -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">به‌پرداخت ملت (شاپرک)</span>
+<span class="text-tertiary material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex items-baseline justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>پاسخگویی سرور:</span>
+<span class="text-on-surface font-mono font-bold">۱۴۲ ms</span>
+</div>
+<div class="flex items-baseline justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>نرخ تراکنش موفق:</span>
+<span class="text-tertiary font-bold">۹۹.۴٪</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-tertiary h-full rounded-full" style="width: 99.4%"></div>
+</div>
+</div>
+<!-- Gateway 2 -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">سداد ملی (شاپرک)</span>
+<span class="text-tertiary material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex items-baseline justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>پاسخگویی سرور:</span>
+<span class="text-on-surface font-mono font-bold">۱۸۸ ms</span>
+</div>
+<div class="flex items-baseline justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>نرخ تراکنش موفق:</span>
+<span class="text-tertiary font-bold">۹۸.۱٪</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-tertiary h-full rounded-full" style="width: 98.1%"></div>
+</div>
+</div>
+<!-- Gateway 3 -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">موتور پیامک کاوه‌نگار</span>
+<span class="text-tertiary material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex items-baseline justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>صف انتظار پیامک:</span>
+<span class="text-on-surface font-mono font-bold">۰ عدد</span>
+</div>
+<div class="flex items-baseline justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>سرعت ارسال OTP:</span>
+<span class="text-secondary font-bold">۲.۱ ثانیه</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-secondary h-full rounded-full" style="width: 96%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Test Dispatcher Tool -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col justify-between shadow-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">send_and_archive</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">شبیه‌ساز و تست ارسال ووچر</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">تست سلامت خط پیامکی و ایمیل مشتری با یک کلیک</p>
+</div>
+<div class="flex flex-col gap-3 my-4">
+<input class="w-full px-4 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary/40 placeholder:text-outline text-left dir-ltr" id="testPhoneInput" placeholder="شماره موبایل گیرنده (مثلا ۰۹۱۲۳۴۵۶۷۸۹)" type="text"/>
+<div class="flex gap-2">
+<select class="flex-1 px-3 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none" id="testPlatformSelect">
+<option value="Steam $10">استیم ۱۰ دلاری آمریکا</option>
+<option value="PSN $20">پلی‌استیشن ۲۰ دلاری آمریکا</option>
+<option value="Xbox Game Pass">ایکس باکس ۱ ماهه</option>
+</select>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-surface-container-high hover:bg-primary-container text-on-surface hover:text-on-primary-container font-label-lg text-label-lg transition-all flex items-center justify-center gap-2" id="sendTestCodeBtn">
+<span class="material-symbols-outlined text-lg">outgoing_mail</span>
+          ارسال کد تست آزمایشی
+        </button>
+</div>
+</div>
+<!-- 3. Digital Code Inventory Management Table -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col gap-6 shadow-xl">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">dns</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">مدیریت کاتالوگ و انبار ووچرهای دیجیتال</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">تغییر زنده قیمت ریالی، نرخ ارز مبنا، افزودن سریع پین‌کدها به موجودی</p>
+</div>
+<!-- Inventory Filters & Search -->
+<div class="flex items-center gap-2 w-full sm:w-auto">
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-lg">search</span>
+<input class="w-full pr-10 pl-3 py-2 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none placeholder:text-outline" id="inventorySearch" placeholder="فیلتر نام یا پلتفرم..." type="text"/>
+</div>
+<button class="p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all">
+<span class="material-symbols-outlined text-xl">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest">
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md border-b-0">
+<th class="py-4 px-4 font-bold">محصول و عنوان</th>
+<th class="py-4 px-4 font-bold">پلتفرم و ریجن</th>
+<th class="py-4 px-4 font-bold">اعتبار ارزی</th>
+<th class="py-4 px-4 font-bold">قیمت فروش (تومان)</th>
+<th class="py-4 px-4 font-bold text-center">کدهای فعال انبار</th>
+<th class="py-4 px-4 font-bold">وضعیت موجودی</th>
+<th class="py-4 px-4 font-bold text-center">عملیات ادمین</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0" id="inventoryTableBody">
+<!-- Row 1: Steam $5 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-8 rounded-lg overflow-hidden relative shadow-sm flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Cyberpunk sleek Steam card visual with deep obsidian dark neon blue glow and steam logo digital gaming luxury gift card" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdMJAJ4ODZQutEU8BY7zXsRceAH8_OfFOS-TLmBoE3zzO0bpbY2yiwtqZm_8Tz-RfjhM0db_3JS5N0qDOCDK-WFSuBGWiesoJlr9HCff8h9VFkto4uHI067roQes87tLP0YBVaXuJjT5DlK1nPcsYU1O9P3Tvbm-HmIUosObYYvsOPbXZfJMroWmIJhu9ftIwrHx8gNplFWOz2cOb96Gchk9x715UeJa3Pvlm8gkIQ"/>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">استیم والت ۵ دلاری</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-secondary/10 text-secondary font-label-sm text-label-sm font-bold">Steam</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">آمریکا (USA)</span>
+</div>
+</td>
+<td class="py-3 px-4 font-bold text-on-surface font-mono">$5.00</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<input class="w-28 px-2 py-1 rounded bg-surface-container text-on-surface font-bold font-mono text-left focus:outline-none focus:ring-1 focus:ring-primary text-sm" type="text" value="۳۶۵,۰۰۰"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">تومان</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary/15 text-tertiary font-bold font-mono">۲۸۴ کد</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  موجود و تکمیل
+                </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="add-stock-btn p-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary transition-all" data-name="استیم والت ۵ دلاری" title="افزایش ووچرها">
+<span class="material-symbols-outlined text-lg">add_box</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" title="ویرایش کاتالوگ">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Steam $10 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-8 rounded-lg overflow-hidden relative shadow-sm flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Futuristic Steam gift card design glowing cyan accents cybernetic circuit lines on dark obsidian background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD85Hzm0DJUahTRhmc2qPVQOiOpxWqF1P2odEwFNqpDSssT6FAnbK6mbF7kS7CwRJgx04ELiNqC_bNcmYWUfYCOGfWkUTv6jyDeNd0m-4L3eyZGvSLreQK6hAAH2bBcrYPe8ZSs4vKFuDuEKiYRElDvGx31Wrpiu8Sgrgbp9p6sT2ymSnZJzCgYqTcZHHr7edqgwvo1BYLwjUlc-IvV5JnaxBwa2jPMIUw5AuFhWac1"/>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">استیم والت ۱۰ دلاری</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-secondary/10 text-secondary font-label-sm text-label-sm font-bold">Steam</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">گلوبال / آمریکا</span>
+</div>
+</td>
+<td class="py-3 px-4 font-bold text-on-surface font-mono">$10.00</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<input class="w-28 px-2 py-1 rounded bg-surface-container text-on-surface font-bold font-mono text-left focus:outline-none focus:ring-1 focus:ring-primary text-sm" type="text" value="۷۱۵,۰۰۰"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">تومان</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary/15 text-tertiary font-bold font-mono">۴۱۰ کد</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  موجود و تکمیل
+                </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="add-stock-btn p-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary transition-all" data-name="استیم والت ۱۰ دلاری" title="افزایش ووچرها">
+<span class="material-symbols-outlined text-lg">add_box</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" title="ویرایش کاتالوگ">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: PlayStation $10 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-8 rounded-lg overflow-hidden relative shadow-sm flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="PlayStation Network gift card neon electric blue gaming symbols square triangle circle cross dark luxury background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmabIYgQ74OXTwZpV8ToC-UKDVtYhiqeS4_1vTLC4MEkC_dkh5jXySOC2bCD8oGg5nJXCiu5m-SsfYiOhmJvcFNP_4zj5Eqw-s5PMUA6nkPBA8jc52VaLK5gO2REdDP3vJy_idCn1NOWRP103a6SZLXfHJD_eeZ-JCRNRcfe_TZ-gcYMBBcbbuPTPGfrY_MvWyAWrkm3NhRN7I78cweWXI7nV_p7DCkCJWNzHDJC-N"/>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">پلی‌استیشن PSN ۱۰ دلاری</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-primary/15 text-primary font-label-sm text-label-sm font-bold">PlayStation</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">آمریکا (US)</span>
+</div>
+</td>
+<td class="py-3 px-4 font-bold text-on-surface font-mono">$10.00</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<input class="w-28 px-2 py-1 rounded bg-surface-container text-on-surface font-bold font-mono text-left focus:outline-none focus:ring-1 focus:ring-primary text-sm" type="text" value="۷۳۰,۰۰۰"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">تومان</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-3 py-1 rounded-full bg-error/15 text-error font-bold font-mono">۴ کد باقیمانده</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-error font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                  هشدار کسری موجودی
+                </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="add-stock-btn p-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary transition-all" data-name="پلی‌استیشن ۱۰ دلاری" title="افزایش ووچرها">
+<span class="material-symbols-outlined text-lg">add_box</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" title="ویرایش کاتالوگ">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: PlayStation $50 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-8 rounded-lg overflow-hidden relative shadow-sm flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="PlayStation Network 50 dollars card luxury violet and cyan holographic gradient sleek futuristic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5Pdsnq9Gavvo2HwnrDJ2IBoYCqxnhr-pHK8PH328NenBHN-xkVumeuijXpJEPKjOYSGxKJd7cBCeoDfwxGaS6pav1l7n-mIf_N3HSgPy7IglbwTtozd3CWRYyIT50s06s4VhdN-_HZ_YHNwAkY_0BJA6HPYuctRMdu0tSCspKLQWaJQu-028nObRElT25-z0O9N_4Cw4Bd5a67W-vmHoGGQ6UV0QZwMzn775xCaMC"/>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">پلی‌استیشن PSN ۵۰ دلاری</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-primary/15 text-primary font-label-sm text-label-sm font-bold">PlayStation</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">آمریکا (US)</span>
+</div>
+</td>
+<td class="py-3 px-4 font-bold text-on-surface font-mono">$50.00</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<input class="w-28 px-2 py-1 rounded bg-surface-container text-on-surface font-bold font-mono text-left focus:outline-none focus:ring-1 focus:ring-primary text-sm" type="text" value="۳,۵۹۰,۰۰۰"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">تومان</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary/15 text-tertiary font-bold font-mono">۶۵ کد</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  موجود و فعال
+                </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="add-stock-btn p-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary transition-all" data-name="پلی‌استیشن ۵۰ دلاری" title="افزایش ووچرها">
+<span class="material-symbols-outlined text-lg">add_box</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" title="ویرایش کاتالوگ">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Xbox Game Pass Ultimate -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-8 rounded-lg overflow-hidden relative shadow-sm flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Xbox Game Pass Ultimate gift card cybernetic neon green lines digital gamer luxury voucher obsidian black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa8vdxgt_ACjaVp5L_kUjL3n297mBUd4vBvUqVfjFV3ZKucjUu48dHuewOrYCOYw5sM978fFrYlgSJWG71X18fS1HB4GRUc5Js-Y46dkdApyW-0_ONTb69bWZYeMlAgOYBkgnjc9wsL3dxfb_HTo2_JcQym6jKpfAO3uGCW2w6xH_9UPEVQuU-S3SMv6IifgYRbqv1ewt6JuTaQg8OGkYKu6etN62UuUp25GF53WJA"/>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ایکس‌باکس گیم‌پس التیمیت (۱ ماهه)</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">Xbox</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">جهانی (Global)</span>
+</div>
+</td>
+<td class="py-3 px-4 font-bold text-on-surface font-mono">$16.99</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<input class="w-28 px-2 py-1 rounded bg-surface-container text-on-surface font-bold font-mono text-left focus:outline-none focus:ring-1 focus:ring-primary text-sm" type="text" value="۸۹۰,۰۰۰"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">تومان</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-3 py-1 rounded-full bg-tertiary/15 text-tertiary font-bold font-mono">۱۹۵ کد</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                  موجود و فعال
+                </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="add-stock-btn p-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary transition-all" data-name="ایکس‌باکس گیم‌پس ۱ ماهه" title="افزایش ووچرها">
+<span class="material-symbols-outlined text-lg">add_box</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" title="ویرایش کاتالوگ">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Apple $25 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-8 rounded-lg overflow-hidden relative shadow-sm flex-shrink-0 bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Apple App Store gift card holographic metallic luxury finish glowing minimalist aesthetics dark mode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArfN4gqlS1dDb5trhNXuh0tUYW4UPbc2BhHwraImgJ24ZzmcY-wmWFKwebfxYh8T3ivbAsgchEhqINQyXLFe6Tgh8TzMIm_ASVwaAqTTsyVrFgAxgPZPdyWT0DW9b-FeEN-SZrr1Z4dynvfwaFrfHlG59kFk5EgM2_6TSeeyOwVAudiCkQTA_8BTP8z9eFB3pZAYW0iV6L2d_xEcOquNSzW6LmLkmXh76L2yY006yp"/>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">اپل استور و آیتونز ۲۵ دلاری</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-bright text-on-surface font-label-sm text-label-sm font-bold">Apple</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">آمریکا (US)</span>
+</div>
+</td>
+<td class="py-3 px-4 font-bold text-on-surface font-mono">$25.00</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<input class="w-28 px-2 py-1 rounded bg-surface-container text-on-surface font-bold font-mono text-left focus:outline-none focus:ring-1 focus:ring-primary text-sm" type="text" value="۱,۷۸۰,۰۰۰"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">تومان</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-block px-3 py-1 rounded-full bg-error/15 text-error font-bold font-mono">۲ کد باقیمانده</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 text-error font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                  نیاز فوری به تمدید
+                </span>
+</td>
+<td class="py-3 px-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button class="add-stock-btn p-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-primary transition-all" data-name="اپل استور ۲۵ دلاری" title="افزایش ووچرها">
+<span class="material-symbols-outlined text-lg">add_box</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" title="ویرایش کاتالوگ">
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>نمایش ۶ محصول اصلی از کل ۲۴ عنوان گیفت‌کارت فعال در فروشگاه</span>
+<button class="text-primary hover:underline font-bold flex items-center gap-1">
+          مشاهده تمام کاتالوگ در انبارداری
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+</button>
+</div>
+</div>
+<!-- 4. Recent Live Transactions & Dispatched Orders -->
+<div class="rounded-2xl bg-surface-container-low p-6 flex flex-col gap-6 shadow-xl">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface">آخرین سفارش‌های ثبت شده و وضعیت توزیع کدها</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">تراکنش‌های لحظه‌ای شاپرک، تخصیص اتوماتیک پین کد و لاگ اعتبارسنجی</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+            سوکت پیام‌رسانی برخط
+          </span>
+</div>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest">
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<th class="py-3 px-4 font-bold">شناسه سفارش</th>
+<th class="py-3 px-4 font-bold">کاربر خریدار</th>
+<th class="py-3 px-4 font-bold">آیتم خریداری شده</th>
+<th class="py-3 px-4 font-bold">مبلغ پرداختی</th>
+<th class="py-3 px-4 font-bold">درگاه بانکی</th>
+<th class="py-3 px-4 font-bold">وضعیت تحویل</th>
+<th class="py-3 px-4 font-bold">زمان</th>
+<th class="py-3 px-4 font-bold text-center">لاگ امنیتی</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0">
+<!-- Order 1 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3.5 px-4 font-mono font-bold text-primary">#GH-98402</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">آرین کاظمی</span>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">۰۹۱۲***۶۷۸۱</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-bold text-on-surface">استیم ۱۰ دلاری آمریکا</td>
+<td class="py-3.5 px-4 font-bold font-mono text-on-surface">۷۱۵,۰۰۰ تومان</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">به‌پرداخت ملت</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                  تحویل آنی شد (پیامک + ایمیل)
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-mono font-label-sm text-label-sm">۲ دقیقه پیش</td>
+<td class="py-3.5 px-4 text-center">
+<button class="order-detail-btn px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm" data-code="ST10-98402-XXXX-7B42">
+                  مشاهده کد
+                </button>
+</td>
+</tr>
+<!-- Order 2 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3.5 px-4 font-mono font-bold text-primary">#GH-98401</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">سپهر دادخواه</span>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">۰۹۳۵***۱۹۴۰</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-bold text-on-surface">پلی‌استیشن ۵۰ دلاری آمریکا</td>
+<td class="py-3.5 px-4 font-bold font-mono text-on-surface">۳,۵۹۰,۰۰۰ تومان</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">سداد ملی</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                  تحویل آنی شد (پیامک + پنل)
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-mono font-label-sm text-label-sm">۱۱ دقیقه پیش</td>
+<td class="py-3.5 px-4 text-center">
+<button class="order-detail-btn px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm" data-code="PS50-USA-4412-MK89">
+                  مشاهده کد
+                </button>
+</td>
+</tr>
+<!-- Order 3 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3.5 px-4 font-mono font-bold text-primary">#GH-98400</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">نیلوفر رهنما</span>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">۰۹۹۰***۸۸۳۲</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-bold text-on-surface">ایکس‌باکس گیم‌پس التیمیت</td>
+<td class="py-3.5 px-4 font-bold font-mono text-on-surface">۸۹۰,۰۰۰ تومان</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">به‌پرداخت ملت</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                  تحویل آنی شد (پیامک + ایمیل)
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-mono font-label-sm text-label-sm">۲۶ دقیقه پیش</td>
+<td class="py-3.5 px-4 text-center">
+<button class="order-detail-btn px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm" data-code="XBGP-1M-7861-QP20">
+                  مشاهده کد
+                </button>
+</td>
+</tr>
+<!-- Order 4 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3.5 px-4 font-mono font-bold text-primary">#GH-98399</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">پرهام اسکندری</span>
+<span class="font-mono text-label-sm text-label-sm text-on-surface-variant">۰۹۱۸***۴۵۰۹</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-bold text-on-surface">استیم والت ۲۰ دلاری</td>
+<td class="py-3.5 px-4 font-bold font-mono text-on-surface">۱,۴۳۰,۰۰۰ تومان</td>
+<td class="py-3.5 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">به‌پرداخت ملت</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-base">check_circle</span>
+                  تحویل آنی شد (پیامک + ایمیل)
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-mono font-label-sm text-label-sm">۴۳ دقیقه پیش</td>
+<td class="py-3.5 px-4 text-center">
+<button class="order-detail-btn px-3 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm" data-code="ST20-98399-XXXX-44A1">
+                  مشاهده کد
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- MODAL: Add New Gift Card & Batch Codes -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4" id="newCardModal">
+<div class="w-full max-w-2xl bg-surface-container-low rounded-3xl p-6 sm:p-8 flex flex-col gap-6 shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative max-h-[921px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">add_card</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">تعریف گیفت‌کارت جدید و تزریق کدها</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">محصول جدید به همراه ریجن و موجودی اولیه را وارد کنید</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center" id="closeNewCardModalBtn">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Platform -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold">پلتفرم سرویس</label>
+<select class="w-full px-3 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none" id="modalPlatform">
+<option>Steam (استیم)</option>
+<option>PlayStation Network (PSN)</option>
+<option>Xbox / Microsoft</option>
+<option>Apple iTunes / App Store</option>
+<option>Google Play</option>
+<option>Nintendo eShop</option>
+</select>
+</div>
+<!-- Region -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold">ریجن (منطقه جغرافیایی)</label>
+<select class="w-full px-3 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none" id="modalRegion">
+<option>آمریکا (USA - $)</option>
+<option>ترکیه (Turkey - TRY)</option>
+<option>اروپا (Eurozone - €)</option>
+<option>انگلستان (UK - £)</option>
+<option>امارات متحده (UAE - AED)</option>
+<option>جهانی (Global)</option>
+</select>
+</div>
+<!-- Currency Value -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold">ارزش اسمی ارزی</label>
+<input class="w-full px-3 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md text-left dir-ltr focus:outline-none" id="modalValue" placeholder="مثلاً: 25.00" type="text"/>
+</div>
+<!-- Rial Price -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-bold">قیمت فروش ریالی (تومان)</label>
+<input class="w-full px-3 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none" id="modalPrice" placeholder="مثلاً: ۱,۷۵۰,۰۰۰" type="text"/>
+</div>
+</div>
+<!-- Batch Import Codes Area -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-bold">کدهای دیجیتال فعال (هر کد در یک خط)</label>
+<span class="font-label-sm text-label-sm text-secondary">کدها پس از ذخیره رمزنگاری هش خواهند شد</span>
+</div>
+<textarea class="w-full p-3 rounded-xl bg-surface-container text-on-surface font-mono text-sm focus:outline-none text-left dir-ltr" id="modalCodes" placeholder="ABCD-1234-EFGH-5678
+WXYZ-9876-UVTS-5432" rows="4"></textarea>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-space-sm pt-2">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" id="cancelModalBtn">
+          انصراف
+        </button>
+<button class="px-6 py-2.5 rounded-xl bg-gradient-to-l from-primary to-primary-container text-on-primary-container font-extrabold font-label-md text-label-md shadow-lg shadow-purple-500/20 hover:brightness-110 transition-all" id="submitNewCardBtn">
+          ذخیره محصول و تزریق به انبار
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script -->
+<script>
+    const newCardModal = document.getElementById('newCardModal');
+    const openNewCardModalBtn = document.getElementById('openNewCardModalBtn');
+    const openBatchModalBtn = document.getElementById('openBatchModalBtn');
+    const closeNewCardModalBtn = document.getElementById('closeNewCardModalBtn');
+    const cancelModalBtn = document.getElementById('cancelModalBtn');
+    const submitNewCardBtn = document.getElementById('submitNewCardBtn');
+    const sendTestCodeBtn = document.getElementById('sendTestCodeBtn');
+    const testPhoneInput = document.getElementById('testPhoneInput');
+
+    function openModal() {
+      newCardModal.classList.remove('hidden');
+    }
+    function closeModal() {
+      newCardModal.classList.add('hidden');
+    }
+
+    openNewCardModalBtn?.addEventListener('click', openModal);
+    openBatchModalBtn?.addEventListener('click', openModal);
+    closeNewCardModalBtn?.addEventListener('click', closeModal);
+    cancelModalBtn?.addEventListener('click', closeModal);
+
+    submitNewCardBtn?.addEventListener('click', () => {
+      const platform = document.getElementById('modalPlatform').value;
+      const val = document.getElementById('modalValue').value || '۱۰';
+      const codes = document.getElementById('modalCodes').value.trim();
+      const codeCount = codes ? codes.split('\n').filter(c => c.trim().length > 0).length : 50;
+
+      alert(`محصول جدید با موفقیت اضافه شد:\n${platform} ارزش: ${val}\nتعداد ${codeCount} کد ووچر به انبار امنیتی اختصاص یافت.`);
+      closeModal();
+    });
+
+    // Stock increase buttons in table
+    document.querySelectorAll('.add-stock-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.getAttribute('data-name');
+        const count = prompt(`تعداد کدهای جدید برای افزودن به [${name}] را وارد کنید:`, '20');
+        if (count && !isNaN(count)) {
+          alert(`تعداد ${count} کد ووچر جدید با موفقیت به انبار [${name}] افزوده شد.`);
+        }
+      });
+    });
+
+    // Test code dispatch
+    sendTestCodeBtn?.addEventListener('click', () => {
+      const phone = testPhoneInput.value.trim() || '۰۹۱۲۳۴۵۶۷۸۹';
+      sendTestCodeBtn.innerText = 'در حال ارسال پیامک...';
+      sendTestCodeBtn.classList.add('opacity-70');
+      
+      setTimeout(() => {
+        alert(`کد تستی شبیه‌سازی شده با موفقیت به شماره ${phone} پیامک و لاگ سامانه ثبت شد.`);
+        sendTestCodeBtn.innerHTML = '<span class="material-symbols-outlined text-lg">outgoing_mail</span>ارسال کد تست آزمایشی';
+        sendTestCodeBtn.classList.remove('opacity-70');
+      }, 1000);
+    });
+
+    // Order detail voucher reveal
+    document.querySelectorAll('.order-detail-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.getAttribute('data-code');
+        alert(`لاگ محرمانه تحویل ووچر به خریدار:\nکد رمزنگاری: ${code}\nوضعیت: تحویل موفقیت‌آمیز`);
+      });
+    });
+  </script>
+</div></main></div></body></html>
